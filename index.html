@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Song Linh Food & Drink - Bistro in Tây Hồ, Hanoi</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/i18next@23.7.11/dist/umd/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-browser-languagedetector@7.2.0/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -80,15 +82,22 @@
                          alt="Song Linh Logo" 
                          class="h-16 w-auto">
                 </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-olive-dark hover:text-olive-mid transition">About</a>
-                    <a href="#gallery" class="text-olive-dark hover:text-olive-mid transition">Gallery</a>
-                    <a href="#services" class="text-olive-dark hover:text-olive-mid transition">Services</a>
-                    <a href="#contact" class="text-olive-dark hover:text-olive-mid transition">Contact</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-olive-dark hover:text-olive-mid transition" data-i18n="nav.about">About</a>
+                    <a href="#gallery" class="text-olive-dark hover:text-olive-mid transition" data-i18n="nav.gallery">Gallery</a>
+                    <a href="#services" class="text-olive-dark hover:text-olive-mid transition" data-i18n="nav.services">Services</a>
+                    <a href="#contact" class="text-olive-dark hover:text-olive-mid transition" data-i18n="nav.contact">Contact</a>
+                    
+                    <!-- Language Switcher -->
+                    <div class="flex items-center gap-2 border-l pl-8 border-gray-200">
+                        <button onclick="changeLanguage('en')" class="lang-btn text-sm font-medium hover:text-olive-mid transition" id="lang-en">EN</button>
+                        <span class="text-gray-300">|</span>
+                        <button onclick="changeLanguage('vi')" class="lang-btn text-sm font-medium hover:text-olive-mid transition text-gray-400" id="lang-vi">VI</button>
+                    </div>
                 </div>
                 <a href="https://maps.app.goo.gl/pNDTQggvDpexRoSU6" 
                    target="_blank"
-                   class="bg-olive-dark text-white px-6 py-2 rounded-full hover:bg-olive-mid transition">
+                   class="bg-olive-dark text-white px-6 py-2 rounded-full hover:bg-olive-mid transition" data-i18n="nav.get_directions">
                     Get Directions
                 </a>
             </div>
@@ -114,15 +123,15 @@
                     <span class="text-xl font-semibold">4.5</span>
                     <span class="text-lg opacity-90">(128 reviews)</span>
                 </div>
-                <p class="text-xl md:text-2xl mb-8 font-light">Authentic Bistro Experience in Tây Hồ, Hanoi</p>
+                <p class="text-xl md:text-2xl mb-8 font-light" data-i18n="hero.tagline">Authentic Bistro Experience in Tây Hồ, Hanoi</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://be.com.vn" 
+                    <a href="https://www.facebook.com/songlinhfoodanddrink" 
                        target="_blank"
-                       class="bg-white text-olive-dark px-8 py-3 rounded-full font-semibold hover:bg-olive-light hover:text-white transition">
+                       class="bg-white text-olive-dark px-8 py-3 rounded-full font-semibold hover:bg-olive-light hover:text-white transition" data-i18n="hero.order">
                         Order Online
                     </a>
                     <a href="tel:+84968877793" 
-                       class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-olive-dark transition">
+                       class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-olive-dark transition" data-i18n="hero.call">
                         Call Us
                     </a>
                 </div>
@@ -133,7 +142,7 @@
     <!-- Services Section -->
     <section id="services" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-olive-dark script-font">Our Services</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-olive-dark script-font" data-i18n="services.title">Our Services</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition">
                     <div class="w-16 h-16 bg-olive-light rounded-full flex items-center justify-center mx-auto mb-4">
@@ -141,8 +150,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-olive-dark">Dine-In</h3>
-                    <p class="text-gray-600">Enjoy our cozy atmosphere and fresh meals in-house</p>
+                    <h3 class="text-xl font-semibold mb-2 text-olive-dark" data-i18n="services.dine_in.title">Dine-In</h3>
+                    <p class="text-gray-600" data-i18n="services.dine_in.desc">Enjoy our cozy atmosphere and fresh meals in-house</p>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition">
                     <div class="w-16 h-16 bg-olive-mid rounded-full flex items-center justify-center mx-auto mb-4">
@@ -150,8 +159,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-olive-dark">Takeout</h3>
-                    <p class="text-gray-600">Grab your favorite dishes to enjoy at home</p>
+                    <h3 class="text-xl font-semibold mb-2 text-olive-dark" data-i18n="services.takeout.title">Takeout</h3>
+                    <p class="text-gray-600" data-i18n="services.takeout.desc">Grab your favorite dishes to enjoy at home</p>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition">
                     <div class="w-16 h-16 bg-olive-dark rounded-full flex items-center justify-center mx-auto mb-4">
@@ -159,8 +168,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-semibold mb-2 text-olive-dark">Delivery</h3>
-                    <p class="text-gray-600">Fast delivery straight to your door</p>
+                    <h3 class="text-xl font-semibold mb-2 text-olive-dark" data-i18n="services.delivery.title">Delivery</h3>
+                    <p class="text-gray-600" data-i18n="services.delivery.desc">Fast delivery straight to your door</p>
                 </div>
             </div>
         </div>
@@ -171,11 +180,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-olive-dark script-font">Welcome to Song Linh</h2>
-                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-olive-dark script-font" data-i18n="about.title">Welcome to Song Linh</h2>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed" data-i18n="about.desc1">
                         Experience authentic Vietnamese cuisine in the heart of Tây Hồ, Hanoi. Our bistro offers a warm, inviting atmosphere where every meal is crafted with care and fresh ingredients.
                     </p>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed" data-i18n="about.desc2">
                         From traditional favorites to modern interpretations, we bring you the best of Vietnamese food and drink culture. Whether you're dining in, taking out, or ordering delivery, we're here to serve you.
                     </p>
                     <div class="flex items-center gap-4 mb-4">
@@ -183,12 +192,12 @@
                             <svg class="w-6 h-6 text-olive-mid" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                             </svg>
-                            <span class="text-olive-dark font-semibold">LGBTQ+ Friendly</span>
+                            <span class="text-olive-dark font-semibold" data-i18n="about.lgbtq">LGBTQ+ Friendly</span>
                         </div>
                     </div>
                     <div class="text-gray-600">
-                        <p class="mb-2"><span class="font-semibold text-olive-dark">Price Range:</span> ₫100,000 - ₫200,000 per person</p>
-                        <p><span class="font-semibold text-olive-dark">Hours:</span> Open daily until 8 PM</p>
+                        <p class="mb-2"><span class="font-semibold text-olive-dark" data-i18n="about.price_range">Price Range:</span> ₫100,000 - ₫200,000 <span data-i18n="about.per_person">per person</span></p>
+                        <p><span class="font-semibold text-olive-dark" data-i18n="about.hours">Hours:</span> <span data-i18n="about.open_daily">Open daily:</span> 8 AM - 8 PM</p>
                     </div>
                 </div>
                 <div class="relative">
@@ -203,7 +212,7 @@
     <!-- Gallery Section -->
     <section id="gallery" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-olive-dark script-font">Gallery</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-olive-dark script-font" data-i18n="gallery.title">Gallery</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:scale-105">
                     <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/523022978_1283901943745230_983118152130174476_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9nMOHJnDvLAQ7kNvwF2FC2R&_nc_oc=Adkg7DCWQ_rnlIYnhLbBC5fcG29Yh1bAnkEydMYoRgUNywmg072vGf3pxuSTs_27Z70&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=OBZQhccrJDDrjkxZN5IGiw&oh=00_AfqmJ4UoMUbGEQ8bLSPjmhEvrWR5Voo7zXZjVO-VZseOig&oe=69652A61" 
@@ -232,7 +241,7 @@
     <!-- Contact Section -->
     <section id="contact" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-olive-dark script-font">Visit Us</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-olive-dark script-font" data-i18n="contact.title">Visit Us</h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
                     <div class="space-y-6">
@@ -244,7 +253,7 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-semibold mb-2 text-olive-dark">Address</h3>
+                                <h3 class="text-xl font-semibold mb-2 text-olive-dark" data-i18n="contact.address.title">Address</h3>
                                 <p class="text-gray-700">
                                     46A Ng.31 Đ. Xuân Diệu<br>
                                     Quảng An, Tây Hồ<br>
@@ -252,7 +261,7 @@
                                 </p>
                                 <a href="https://maps.app.goo.gl/pNDTQggvDpexRoSU6" 
                                    target="_blank"
-                                   class="text-olive-mid hover:text-olive-dark mt-2 inline-block">
+                                   class="text-olive-mid hover:text-olive-dark mt-2 inline-block" data-i18n="contact.get_directions">
                                     Get Directions →
                                 </a>
                             </div>
@@ -265,7 +274,7 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-semibold mb-2 text-olive-dark">Phone</h3>
+                                <h3 class="text-xl font-semibold mb-2 text-olive-dark" data-i18n="contact.phone.title">Phone</h3>
                                 <a href="tel:+84968877793" class="text-gray-700 hover:text-olive-dark">
                                     +84 968 877 793
                                 </a>
@@ -279,8 +288,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-semibold mb-2 text-olive-dark">Hours</h3>
-                                <p class="text-gray-700">Open daily until 8 PM</p>
+                                <h3 class="text-xl font-semibold mb-2 text-olive-dark" data-i18n="contact.hours.title">Hours</h3>
+                                <p class="text-gray-700"><span data-i18n="about.open_daily">Open daily:</span> 8 AM - 8 PM</p>
                             </div>
                         </div>
                         
@@ -291,11 +300,11 @@
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-xl font-semibold mb-2 text-olive-dark">Order Online</h3>
-                                <a href="https://be.com.vn" 
+                                <h3 class="text-xl font-semibold mb-2 text-olive-dark" data-i18n="contact.order.title">Order Online</h3>
+                                <a href="https://www.facebook.com/songlinhfoodanddrink" 
                                    target="_blank"
-                                   class="text-gray-700 hover:text-olive-dark">
-                                    be.com.vn
+                                   class="text-gray-700 hover:text-olive-dark" data-i18n="contact.order.desc">
+                                    facebook.com/songlinhfoodanddrink
                                 </a>
                             </div>
                         </div>
@@ -325,19 +334,19 @@
                     <img src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/305205266_488923766576389_2312437609272717366_n.png?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=H9NgRKQX7GcQ7kNvwGGhT5e&_nc_oc=AdkWna2kwUTaKi91FLIFif-aCSDZ_NQXalLgfxgRL88rRIargW82pEj8bwxngT0H7K8&_nc_zt=23&_nc_ht=scontent.fhan14-1.fna&_nc_gid=apUnSYUqME1PzAbtbnlV-g&oh=00_AfrVZPk1TUpm2ytJO7a2G6dQKgOn6W8v8yVuQM2K_2duhQ&oe=69651B10" 
                          alt="Song Linh Logo" 
                          class="h-16 w-auto mb-4">
-                    <p class="text-olive-light">Authentic Vietnamese cuisine in the heart of Tây Hồ</p>
+                    <p class="text-olive-light" data-i18n="footer.desc">Authentic Vietnamese cuisine in the heart of Tây Hồ</p>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer.quick_links">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#about" class="text-olive-light hover:text-white transition">About</a></li>
-                        <li><a href="#gallery" class="text-olive-light hover:text-white transition">Gallery</a></li>
-                        <li><a href="#services" class="text-olive-light hover:text-white transition">Services</a></li>
-                        <li><a href="#contact" class="text-olive-light hover:text-white transition">Contact</a></li>
+                        <li><a href="#about" class="text-olive-light hover:text-white transition" data-i18n="nav.about">About</a></li>
+                        <li><a href="#gallery" class="text-olive-light hover:text-white transition" data-i18n="nav.gallery">Gallery</a></li>
+                        <li><a href="#services" class="text-olive-light hover:text-white transition" data-i18n="nav.services">Services</a></li>
+                        <li><a href="#contact" class="text-olive-light hover:text-white transition" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <h3 class="text-lg font-semibold mb-4" data-i18n="footer.connect">Connect</h3>
                     <ul class="space-y-2">
                         <li>
                             <a href="https://facebook.com" 
@@ -361,13 +370,149 @@
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-olive-mid pt-8 text-center text-olive-light">
-                <p>&copy; 2024 Song Linh Food & Drink. All rights reserved.</p>
+                <div class="border-t border-olive-mid pt-8 text-center text-olive-light">
+                <p>&copy; 2024 Song Linh Food & Drink. <span data-i18n="footer.rights">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
 
     <script>
+        const resources = {
+            en: {
+                translation: {
+                    nav: {
+                        about: "About",
+                        gallery: "Gallery",
+                        services: "Services",
+                        contact: "Contact",
+                        get_directions: "Get Directions"
+                    },
+                    hero: {
+                        tagline: "Authentic Bistro Experience in Tây Hồ, Hanoi",
+                        order: "Order Online",
+                        call: "Call Us"
+                    },
+                    services: {
+                        title: "Our Services",
+                        dine_in: { title: "Dine-In", desc: "Enjoy our cozy atmosphere and fresh meals in-house" },
+                        takeout: { title: "Takeout", desc: "Grab your favorite dishes to enjoy at home" },
+                        delivery: { title: "Delivery", desc: "Fast delivery straight to your door" }
+                    },
+                    about: {
+                        title: "Welcome to Song Linh",
+                        desc1: "Experience authentic Vietnamese cuisine in the heart of Tây Hồ, Hanoi. Our bistro offers a warm, inviting atmosphere where every meal is crafted with care and fresh ingredients.",
+                        desc2: "From traditional favorites to modern interpretations, we bring you the best of Vietnamese food and drink culture. Whether you're dining in, taking out, or ordering delivery, we're here to serve you.",
+                        lgbtq: "LGBTQ+ Friendly",
+                        price_range: "Price Range:",
+                        per_person: "per person",
+                        hours: "Hours:",
+                        open_daily: "Open daily:"
+                    },
+                    gallery: { title: "Gallery" },
+                    contact: {
+                        title: "Visit Us",
+                        address: { title: "Address" },
+                        phone: { title: "Phone" },
+                        hours: { title: "Hours" },
+                        order: { title: "Order Online", desc: "facebook.com/songlinhfoodanddrink" },
+                        get_directions: "Get Directions →"
+                    },
+                    footer: { 
+                        desc: "Authentic Vietnamese cuisine in the heart of Tây Hồ",
+                        quick_links: "Quick Links",
+                        connect: "Connect",
+                        rights: "All rights reserved." 
+                    }
+                }
+            },
+            vi: {
+                translation: {
+                    nav: {
+                        about: "Giới thiệu",
+                        gallery: "Ảnh",
+                        services: "Dịch vụ",
+                        contact: "Liên hệ",
+                        get_directions: "Chỉ đường"
+                    },
+                    hero: {
+                        tagline: "Trải nghiệm Bistro đích thực tại Tây Hồ, Hà Nội",
+                        order: "Đặt món trực tuyến",
+                        call: "Gọi cho chúng tôi"
+                    },
+                    services: {
+                        title: "Dịch vụ của chúng tôi",
+                        dine_in: { title: "Ăn tại chỗ", desc: "Tận hưởng không gian ấm cúng và những bữa ăn tươi ngon" },
+                        takeout: { title: "Mang về", desc: "Thưởng thức các món ăn yêu thích ngay tại nhà" },
+                        delivery: { title: "Giao hàng", desc: "Giao hàng nhanh chóng đến tận cửa nhà bạn" }
+                    },
+                    about: {
+                        title: "Chào mừng đến với Song Linh",
+                        desc1: "Trải nghiệm ẩm thực Việt Nam đích thực giữa lòng Tây Hồ, Hà Nội. Bistro của chúng tôi mang đến không gian ấm cúng, gần gũi, nơi mỗi bữa ăn đều được chuẩn bị tỉ mỉ từ những nguyên liệu tươi ngon nhất.",
+                        desc2: "Từ những món ăn truyền thống đến những biến tấu hiện đại, chúng tôi mang đến cho bạn những gì tinh túy nhất của văn hóa ẩm thực Việt. Dù bạn ăn tại chỗ, mang về hay đặt giao hàng, chúng tôi luôn sẵn lòng phục vụ.",
+                        lgbtq: "Thân thiện với cộng đồng LGBTQ+",
+                        price_range: "Khoảng giá:",
+                        per_person: "mỗi người",
+                        hours: "Giờ mở cửa:",
+                        open_daily: "Mở cửa hàng ngày:"
+                    },
+                    gallery: { title: "Bộ sưu tập ảnh" },
+                    contact: {
+                        title: "Ghé thăm chúng tôi",
+                        address: { title: "Địa chỉ" },
+                        phone: { title: "Điện thoại" },
+                        hours: { title: "Giờ mở cửa" },
+                        order: { title: "Đặt món trực tuyến", desc: "facebook.com/songlinhfoodanddrink" },
+                        get_directions: "Chỉ đường →"
+                    },
+                    footer: { 
+                        desc: "Ẩm thực Việt Nam đích thực giữa lòng Tây Hồ",
+                        quick_links: "Liên kết nhanh",
+                        connect: "Kết nối",
+                        rights: "Bản quyền đã được bảo hộ." 
+                    }
+                }
+            }
+        };
+
+        i18next
+            .use(i18nextBrowserLanguageDetector)
+            .init({
+                resources,
+                fallbackLng: 'en',
+                debug: false
+            }, function(err, t) {
+                updateContent();
+                updateLangSwitcher();
+            });
+
+        function updateContent() {
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                element.innerHTML = i18next.t(key);
+            });
+        }
+
+        function changeLanguage(lng) {
+            i18next.changeLanguage(lng, (err, t) => {
+                if (err) return console.log('something went wrong loading', err);
+                updateContent();
+                updateLangSwitcher();
+            });
+        }
+
+        function updateLangSwitcher() {
+            const currentLng = i18next.language.split('-')[0];
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.add('text-gray-400');
+                btn.classList.remove('text-olive-dark', 'font-bold');
+            });
+            const activeBtn = document.getElementById(`lang-${currentLng}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-gray-400');
+                activeBtn.classList.add('text-olive-dark', 'font-bold');
+            }
+        }
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
