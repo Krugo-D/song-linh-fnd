@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Linh Food & Drink - Bistro in Tây Hồ, Hanoi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'olive-dark': '#556B2F',
+                        'olive-light': '#8FBC8F',
+                        'olive-mid': '#6B8E23',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .script-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-jumbotron {
+            background-image: url('https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-6/558891618_1353373373464753_2274780581392382096_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=yV3-ZqZvvVQQ7kNvwGtGpfC&_nc_oc=AdnDoj1gf03Um1C0KsZnxZYSBnGs7q6EzRZIMbxoHz3GPZuVn7OrdUGjH-FfbpnkuIE&_nc_zt=23&_nc_ht=scontent.fhan14-5.fna&_nc_gid=_4jMFqE_ygzEA9Lp-Czp6A&oh=00_AfpcPQVJLE5NzxaLYtlpyt8tCBQtY7HEaUUUgq1w6gkaJg&oe=696522F1');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        
+        @media (min-width: 768px) {
+            .hero-jumbotron {
+                background-attachment: fixed;
+            }
+        }
+        
+        .hero-jumbotron::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(85, 107, 47, 0.85) 0%, rgba(107, 142, 35, 0.75) 50%, rgba(143, 188, 143, 0.7) 100%);
+            z-index: 1;
+        }
+        
+        .leaf-decoration {
+            position: relative;
+        }
+        
+        .leaf-decoration::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10 Q30 30 20 50 Q30 70 50 90 Q70 70 80 50 Q70 30 50 10" fill="%238FBC8F" opacity="0.3"/></svg>') no-repeat;
+            top: -20px;
+            left: -20px;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
+                    <img src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/305205266_488923766576389_2312437609272717366_n.png?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=H9NgRKQX7GcQ7kNvwGGhT5e&_nc_oc=AdkWna2kwUTaKi91FLIFif-aCSDZ_NQXalLgfxgRL88rRIargW82pEj8bwxngT0H7K8&_nc_zt=23&_nc_ht=scontent.fhan14-1.fna&_nc_gid=apUnSYUqME1PzAbtbnlV-g&oh=00_AfrVZPk1TUpm2ytJO7a2G6dQKgOn6W8v8yVuQM2K_2duhQ&oe=69651B10" 
+                         alt="Song Linh Logo" 
+                         class="h-16 w-auto">
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-olive-dark hover:text-olive-mid transition">About</a>
+                    <a href="#gallery" class="text-olive-dark hover:text-olive-mid transition">Gallery</a>
+                    <a href="#services" class="text-olive-dark hover:text-olive-mid transition">Services</a>
+                    <a href="#contact" class="text-olive-dark hover:text-olive-mid transition">Contact</a>
+                </div>
+                <a href="https://maps.app.goo.gl/pNDTQggvDpexRoSU6" 
+                   target="_blank"
+                   class="bg-olive-dark text-white px-6 py-2 rounded-full hover:bg-olive-mid transition">
+                    Get Directions
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-jumbotron text-white py-20 md:py-32 relative overflow-hidden min-h-[600px] flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="text-center">
+                <h1 class="script-font text-5xl md:text-7xl font-bold mb-4">
+                    Song Linh
+                </h1>
+                <p class="text-2xl md:text-3xl font-light mb-6">Food & Drink</p>
+                <div class="flex items-center justify-center gap-2 mb-8">
+                    <div class="flex text-yellow-300">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <span class="text-xl font-semibold">4.5</span>
+                    <span class="text-lg opacity-90">(128 reviews)</span>
+                </div>
+                <p class="text-xl md:text-2xl mb-8 font-light">Authentic Bistro Experience in Tây Hồ, Hanoi</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://be.com.vn" 
+                       target="_blank"
+                       class="bg-white text-olive-dark px-8 py-3 rounded-full font-semibold hover:bg-olive-light hover:text-white transition">
+                        Order Online
+                    </a>
+                    <a href="tel:+84968877793" 
+                       class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-olive-dark transition">
+                        Call Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-olive-dark script-font">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-olive-light rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-olive-dark">Dine-In</h3>
+                    <p class="text-gray-600">Enjoy our cozy atmosphere and fresh meals in-house</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-olive-mid rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-olive-dark">Takeout</h3>
+                    <p class="text-gray-600">Grab your favorite dishes to enjoy at home</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-olive-dark rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2 text-olive-dark">Delivery</h3>
+                    <p class="text-gray-600">Fast delivery straight to your door</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-olive-dark script-font">Welcome to Song Linh</h2>
+                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                        Experience authentic Vietnamese cuisine in the heart of Tây Hồ, Hanoi. Our bistro offers a warm, inviting atmosphere where every meal is crafted with care and fresh ingredients.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        From traditional favorites to modern interpretations, we bring you the best of Vietnamese food and drink culture. Whether you're dining in, taking out, or ordering delivery, we're here to serve you.
+                    </p>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-6 h-6 text-olive-mid" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-olive-dark font-semibold">LGBTQ+ Friendly</span>
+                        </div>
+                    </div>
+                    <div class="text-gray-600">
+                        <p class="mb-2"><span class="font-semibold text-olive-dark">Price Range:</span> ₫100,000 - ₫200,000 per person</p>
+                        <p><span class="font-semibold text-olive-dark">Hours:</span> Open daily until 8 PM</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-6/558891618_1353373373464753_2274780581392382096_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=yV3-ZqZvvVQQ7kNvwGtGpfC&_nc_oc=AdnDoj1gf03Um1C0KsZnxZYSBnGs7q6EzRZIMbxoHz3GPZuVn7OrdUGjH-FfbpnkuIE&_nc_zt=23&_nc_ht=scontent.fhan14-5.fna&_nc_gid=_4jMFqE_ygzEA9Lp-Czp6A&oh=00_AfpcPQVJLE5NzxaLYtlpyt8tCBQtY7HEaUUUgq1w6gkaJg&oe=696522F1" 
+                         alt="Song Linh Food & Drink" 
+                         class="rounded-2xl shadow-2xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-olive-dark script-font">Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/523022978_1283901943745230_983118152130174476_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=9nMOHJnDvLAQ7kNvwF2FC2R&_nc_oc=Adkg7DCWQ_rnlIYnhLbBC5fcG29Yh1bAnkEydMYoRgUNywmg072vGf3pxuSTs_27Z70&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=OBZQhccrJDDrjkxZN5IGiw&oh=00_AfqmJ4UoMUbGEQ8bLSPjmhEvrWR5Voo7zXZjVO-VZseOig&oe=69652A61" 
+                         alt="Food Gallery 1" 
+                         class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/500075591_1231892558946169_5754941215232810377_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=pJTHGs5WO1AQ7kNvwF_io8S&_nc_oc=AdmRWn_2qbHxARxSFfo2K-xlz-Td3mLXluH1yRDuqRhECf64x1Muxtv_wJarjDOuq4g&_nc_zt=23&_nc_ht=scontent.fhan14-3.fna&_nc_gid=tJe8tNmRrpx1QQECrTkvMg&oh=00_AfopbXthFtA2A0x9Ipa3DOvkvQOqH0b_PHKddTYxvRl-SQ&oe=69651259" 
+                         alt="Food Gallery 2" 
+                         class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <img src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/490708332_1199146218887470_326742286591446595_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=RTfZluKxe6kQ7kNvwHloTPR&_nc_oc=AdmC520Ktd0w2KN3K-uEpdlPC0XtpI_-4zaazL_dkRgOsizZLcjxP66y2Z0gnEcXrIY&_nc_zt=23&_nc_ht=scontent.fhan14-1.fna&_nc_gid=ziI5qHea3HS5rQw4gNf64A&oh=00_AfqB1YQBUKlYj0h1e0Tn4nPhJNIoFPnpUVpa5J0kGAkS4g&oe=6965333A" 
+                         alt="Food Gallery 3" 
+                         class="w-full h-64 object-cover">
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition transform hover:scale-105">
+                    <img src="https://scontent.fhan14-5.fna.fbcdn.net/v/t39.30808-6/490465572_1198494185619340_5758953494900456066_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=eu8Bd09YW7MQ7kNvwE7zlcl&_nc_oc=AdmOR5W6EaGsCh1Lr_H2SEAftQNvL9WJyQLHD1lklFswBI1MHO6K7dz2gNu_xpEkpsA&_nc_zt=23&_nc_ht=scontent.fhan14-5.fna&_nc_gid=UF1kMdlZgxObIkePaymneQ&oh=00_AfqfitdgUEo9S_JkzVKqkyvyIoH3y5-rw_-0wbfwEwQIXQ&oe=69653AC6" 
+                         alt="Food Gallery 4" 
+                         class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-olive-dark script-font">Visit Us</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-olive-light rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-olive-dark">Address</h3>
+                                <p class="text-gray-700">
+                                    46A Ng.31 Đ. Xuân Diệu<br>
+                                    Quảng An, Tây Hồ<br>
+                                    Hà Nội 100000, Vietnam
+                                </p>
+                                <a href="https://maps.app.goo.gl/pNDTQggvDpexRoSU6" 
+                                   target="_blank"
+                                   class="text-olive-mid hover:text-olive-dark mt-2 inline-block">
+                                    Get Directions →
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-olive-mid rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-olive-dark">Phone</h3>
+                                <a href="tel:+84968877793" class="text-gray-700 hover:text-olive-dark">
+                                    +84 968 877 793
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-olive-dark rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-olive-dark">Hours</h3>
+                                <p class="text-gray-700">Open daily until 8 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-olive-light rounded-full flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-olive-dark">Order Online</h3>
+                                <a href="https://be.com.vn" 
+                                   target="_blank"
+                                   class="text-gray-700 hover:text-olive-dark">
+                                    be.com.vn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-lg">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.5!2d105.8!3d21.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDAwJzAwLjAiTiAxMDXCsDQ4JzAwLjAiRQ!5e0!3m2!1sen!2s!4v1234567890!5m2!1sen!2s"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 400px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-olive-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <img src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/305205266_488923766576389_2312437609272717366_n.png?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=H9NgRKQX7GcQ7kNvwGGhT5e&_nc_oc=AdkWna2kwUTaKi91FLIFif-aCSDZ_NQXalLgfxgRL88rRIargW82pEj8bwxngT0H7K8&_nc_zt=23&_nc_ht=scontent.fhan14-1.fna&_nc_gid=apUnSYUqME1PzAbtbnlV-g&oh=00_AfrVZPk1TUpm2ytJO7a2G6dQKgOn6W8v8yVuQM2K_2duhQ&oe=69651B10" 
+                         alt="Song Linh Logo" 
+                         class="h-16 w-auto mb-4">
+                    <p class="text-olive-light">Authentic Vietnamese cuisine in the heart of Tây Hồ</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-olive-light hover:text-white transition">About</a></li>
+                        <li><a href="#gallery" class="text-olive-light hover:text-white transition">Gallery</a></li>
+                        <li><a href="#services" class="text-olive-light hover:text-white transition">Services</a></li>
+                        <li><a href="#contact" class="text-olive-light hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="https://facebook.com" 
+                               target="_blank"
+                               class="text-olive-light hover:text-white transition flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+84968877793" 
+                               class="text-olive-light hover:text-white transition flex items-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                </svg>
+                                +84 968 877 793
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-olive-mid pt-8 text-center text-olive-light">
+                <p>&copy; 2024 Song Linh Food & Drink. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
